@@ -123,7 +123,7 @@ def search_and_send_request(till_page, writer, ignore_list=[]):
         for connection_time, result in connections_with_time:
 
                 # Vérifier si le temps de connexion est inférieur à 23 heures
-            if connection_time > datetime.now() - timedelta(days=2):
+            if connection_time > datetime.now() - timedelta(days=7):
                 print("%s ) TIME OK: %s" % (index, text))
                     # Trouver le bouton Message
                 message_button = result.find_element(By.CSS_SELECTOR, "button[aria-label*='Send a message to']")
@@ -140,7 +140,7 @@ def search_and_send_request(till_page, writer, ignore_list=[]):
                         first_name = full_name.split(' ')[0] 
                         time.sleep(10)
 
-                        personalized_message = f"Bonjour {first_name}, \nContente de faire parti de votre réseaux"
+                        personalized_message = f"Bonjour {first_name}, \nMerci pour la connexion.\n\nAs-tu déjà entendu parler du portage salarial ?"
                         message_box.send_keys(personalized_message)
 
                         #message_box.send_keys('Bonjour, contente de faire parti de votre réseaux')
