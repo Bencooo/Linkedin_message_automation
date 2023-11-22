@@ -145,7 +145,7 @@ try:
     driver.find_element('xpath', '//*[@type="submit"]').click()
     time.sleep(20)
     # CSV file loging
-    file_name = parameters.file_name
+    #file_name = parameters.file_name
     file_name = "/Users/aymen/Documents/linkedin/Bot/connectionsMessages.csv"
     file_exists = os.path.isfile(file_name)
     writer = csv.writer(open(file_name, 'a'))
